@@ -1,6 +1,5 @@
 require 'net/https'
 require 'json'
-require 'byebug'
 
 class MakeHttpsRequest
   def call(url, hash_json)
@@ -9,7 +8,6 @@ class MakeHttpsRequest
     req.body = hash_json.to_json
     req['Content-Type'] = 'application/json'
     req['User-Agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36'
-    # ... set more request headers 
 
     response = https(uri).request(req)
 
