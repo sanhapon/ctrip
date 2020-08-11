@@ -1,7 +1,7 @@
 class RateController < ApplicationController  
 
   def search
-    
+    @criteria = SearchCriteria.new
   end
 
   def list
