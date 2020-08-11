@@ -1,0 +1,20 @@
+<%= form_with(class: "shadow p-3 mb-3 bg-info rounded", local: true) do |f| %>
+  <div class="form-row">
+    <div class="col-md-3 mb-3">
+      <%= f.label :city, class: "col-form-label"%>
+      <%= f.text_field :city, class: "form-control", placeholder: @criteria.city%>
+    </div>
+    <div class="col-md-3 mb-3">
+      <%= f.label :from, class: "col-form-label"%>
+      <%= f.text_field :from, class: "form-control", placeholder: @criteria.from%>
+    </div>
+    <div class="col-md-3 mb-3">
+      <%= f.label :to, class: "col-form-label"%>
+      <%= f.text_field :to, class: "form-control", placeholder: @criteria.to%>
+    </div>
+    <div class="col-md-3">
+      <label class="col-form-label"></label>
+      <%= f.submit "Search", class: "form-control btn-outline-light btn-primary btn-sm shadow rounded btn-search"%>
+    </div>
+  </div>
+<%end%> 

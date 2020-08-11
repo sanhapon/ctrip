@@ -11,9 +11,12 @@ class RateController < ApplicationController
     #   Hotel.new(2, "sofitel", 100, 120),
     #   Hotel.new(3, "novotel", 120, 200),
     # ]
+
+    city = params[:city]
     from = params[:from]
-    nights = params[:nights]
+    to = params[:to]
   
-    @hotelList = Search.new.getSearchResults(from, nights)
+    @hotelList = Search.new.getSearchResults(city, from, to)
+    @criteria = SearchCriteria.new(city, from, to)
   end
 end

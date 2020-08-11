@@ -1,9 +1,8 @@
 require 'json'
-# require_relative 'MakeHttpsRequest'
 
 class Search
 
-  def getSearchResults(from, to) 
+  def getSearchResults(city, from, to) 
     url = "https://th.trip.com/hotels/list?city=622&countryId=4&checkin=#{from}&checkout=#{to}&directSearch=0&crn=1&adult=1&children=0&searchBoxArg=t&travelPurpose=0&ctm_ref=ix_sb_dl&domestic=1"
     hotel_list = getCitySearchResults(url)
     hotel_price_list = getHotelPrice(hotel_list)

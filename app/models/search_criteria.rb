@@ -1,10 +1,10 @@
 class SearchCriteria
   attr_accessor :city, :from, :to
 
-  def initialize()
-    @city = "Pattaya"
-    @from = getFormattedDate(Date.today.next_day(7))
-    @to = getFormattedDate(Date.today.next_day(8))
+  def initialize(city = "", from = "", to = "")
+    @city = city.empty? ? "Pattaya" : city
+    @from = from.empty? ? getFormattedDate(Date.today.next_day(7)) : from
+    @to = from.empty? ? getFormattedDate(Date.today.next_day(8)) : to
   end
 
   private 

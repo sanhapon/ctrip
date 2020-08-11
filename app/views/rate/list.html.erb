@@ -1,22 +1,23 @@
-<h1>Hotels in <strong>pataya</strong></h1>
-<br />
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">Hotel ID</th>
-      <th scope="col">Name</th>
-      <th scope="col">Priace</th>
-      <th scope="col">After Tax Price</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @hotelList.each do | hotel | %>
+<div class="container mt-4">
+  <%= render "search_box"%>   
+  <table class="table table-striped">
+    <thead>
       <tr>
-        <td><%=hotel.id%></td>
-        <td><%=hotel.name%></td>
-        <td><%=hotel.price%></td>
-        <td><%=hotel.afterTaxPrice%></td>
+        <th scope="col">Hotel ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Priace</th>
+        <th scope="col">After Tax Price</th>
       </tr>
-  <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @hotelList.each do | hotel | %>
+        <tr>
+          <td><%=hotel.id%></td>
+          <td><%=hotel.name%></td>
+          <td><%=hotel.price%></td>
+          <td><%=hotel.afterTaxPrice%></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
