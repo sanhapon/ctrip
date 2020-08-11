@@ -10,6 +10,6 @@ class SearchCriteria
   private 
 
   def getFormattedDate(date)
-    date.strftime("%m/%d/%y%y")
+    date.strftime("%y%y-%m-%d")
   end
 end
